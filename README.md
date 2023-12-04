@@ -118,3 +118,6 @@ emacs: calc-grab-rectangle, calc-vector-mean
 
 1:  0.437237316097  std dev.
 
+
+![Photo](sprite.gif)
+
