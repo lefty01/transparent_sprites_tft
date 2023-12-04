@@ -90,6 +90,7 @@ emacs: calc-grab-rectangle, calc-vector-mean
 7874
 ```
 2:  7870.23529412 mean
+
 1:  2.7278519884  std deviation
 
 
