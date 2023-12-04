@@ -94,6 +94,7 @@ emacs: calc-grab-rectangle, calc-vector-mean
 
 
 ### LovyanGFX
+```
 4293
 4292
 4292
@@ -111,7 +112,8 @@ emacs: calc-grab-rectangle, calc-vector-mean
 4292
 4292
 4292
-
+```
 1:  4292.23529412   mean
+
 1:  0.437237316097  std dev.
 
