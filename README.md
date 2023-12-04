@@ -1,5 +1,5 @@
 # transparent_sprites_tft
-based on the excellent video tutorial and related code #VolosR/SpritesTuT by Volos Projects I compared tft_eSpi vs. LovyanGFX.
+based on the excellent video tutorial and related code [VolosR/SpritesTuT](https://github.com/VolosR/SpritesTuT) by Volos Projects I compared tft_eSpi vs. LovyanGFX.
 
 There were basically two things leading to this code (well besides the third reason to finally learn about sprites) a) convert volos code from tft_espi to lovyangfx and b) print some timing info about how long it takes for the sprite to move along a 240x135 tft screen.
 
