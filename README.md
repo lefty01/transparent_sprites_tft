@@ -25,13 +25,18 @@ TFT_eSprite txtSprite    = TFT_eSprite(&tft);  // text
 TFT_eSprite txt2Sprite   = TFT_eSprite(&tft);  // text
 ```
 
-In LGFX on the other hand onlye background sprite is using main LGFX object pointer, the other sprites take background sprite as their argument.
+In LGFX on the other hand can just use object declaration (not providing anything to constructor). But its possible to provide sprite object reference or the LGFX (here &tft) object ref to sprite creation as well like this:
 ```
-LGFX tft;
 LGFX_Sprite bgSprite(&tft);
 LGFX_Sprite rocketSprite(&bgSprite);
-LGFX_Sprite txtSprite(&bgSprite);
-LGFX_Sprite txt2Sprite(&bgSprite);
+```
+... or as in the code sample here:
+```
+LGFX tft;
+LGFX_Sprite bgSprite;
+LGFX_Sprite rocketSprite;
+LGFX_Sprite txtSprite;
+LGFX_Sprite txt2Sprite;
 ```
 
 
@@ -55,12 +60,12 @@ TFT_eSPI using pushToSprite:
   txt2Sprite.pushToSprite(&bgSprite, 15, 100, TFT_BLACK);
   bgSprite.pushSprite(0, 0);
 ```
-LGFX only pushSprite, the layering defined at sprite construction above:
+LGFX similar, pushSprite to other sprite or tft:
 ```
-  rocketSprite.pushSprite(x, 20, TFT_BLACK);
-  txtSprite.pushSprite(140, 80, TFT_BLACK);
-  txt2Sprite.pushSprite(15, 100, TFT_BLACK);
-  bgSprite.pushSprite(0, 0);
+  rocketSprite.pushSprite(&bgSprite, x, 20, TFT_BLACK);
+  txtSprite.pushSprite(&bgSprite, 140, 80, TFT_BLACK);
+  txt2Sprite.pushSprite(&bgSprite, 15, 100, TFT_BLACK);
+  bgSprite.pushSprite(&tft, 0, 0);
 ```
 
 
